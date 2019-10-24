@@ -1,11 +1,13 @@
 //create a variable to hold one ball
 let b;
 let anotherBall;
+let anotheranotherBall;
 
 function setup() {
   createCanvas(800, 400);
-  b = new Ball(0, 100,"red"); //make a new ball from the Ball class and call it b.
-  anotherBall = new Ball(200,20,"green");
+  b = new Ball(0, 100,"blue"); //make a new ball from the Ball class and call it b.
+  anotherBall = new Ball(200,20,"purple");
+  anotheranotherBall = new Ball(300, 69, "orange")
 }
 
 
@@ -15,6 +17,8 @@ function draw(){
     b.moveBall(); //move the ball called b (go look in the Ball class for the moveBall function)
     anotherBall.drawBall();
     anotherBall.moveBall();
+    anotheranotherBall.drawBall();
+    anotheranotherBall.moveBall();
 
 }
 
@@ -28,12 +32,12 @@ class Ball {
         this.color= color;
 	}
 	drawBall(){  // draw a ball on the screen at x,y
-    		stroke(0);
+    		stroke(2);
     		fill(this.color);
-		    ellipse(this.x,this.y,10,10);
+		    ellipse(this.x,this.y,20,10);
 	}
 	moveBall(){ //update the location of the ball, so it moves across the screen
-		this.x = this.x+2;
-		this.y = this.y+.5;
+		this.x = this.x+20;
+		this.y = this.y+5;
 	}
 }
