@@ -15,6 +15,7 @@ function draw(){
 
 for (let i = 0; i < rectangles.length; i++) {
   rectangles[i].drawRect();
+  rectangles[i].moveRect();
 }
 
 	for (let i = 0; i < balls.length; i++) {
