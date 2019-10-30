@@ -8,11 +8,11 @@ let mySound;
 
 function preload() {
   soundFormats('mp3', 'ogg');
-  mySound = loadSound('boing1.mp3');
+  mySound = loadSound('Explosion.mp3');
 }
 
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(600, 400);
 
   //make one avatar called me
   me = new Avatar(width/2, 300, 3);
@@ -107,7 +107,7 @@ class Ball {
   	bounceBall(){
     		if (this.x >= me.x-15 && this.x <= me.x+15 && this.y > me.y-40 && this.y < me.y+40){
       			this.speed = -this.speed;
-            mySound.setVolume(0.1);
+            mySound.setVolume(1);
             mySound.play();
     		}
   	}
